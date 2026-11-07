@@ -95,6 +95,17 @@ body{
 @keyframes fadeOut{to{opacity:0}}
 @keyframes pop{from{opacity:0;transform:scale(.88)}}
 
+.music-toggle{
+  position:fixed;right:1rem;bottom:1rem;z-index:90;width:56px;height:56px;
+  border:0;border-radius:50%;background:linear-gradient(135deg,#f2b8c6,#d99aaa);
+  color:#6e2a3b;cursor:pointer;box-shadow:0 12px 28px rgba(110,42,59,.25);
+  font-size:1.5rem;display:grid;place-items:center;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.music-toggle:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 16px 32px rgba(110,42,59,.32)}
+.music-toggle:active{transform:scale(.96)}
+.music-toggle:focus-visible{outline:3px solid #6e2a3b;outline-offset:3px}
+
 /* mid widths: shrink gutters */
 @media (max-width:1100px) and (min-width:861px){
   .stage{padding-left:210px;padding-right:210px}
@@ -111,6 +122,7 @@ body{
   .photo{position:relative;top:auto!important;left:auto!important;right:auto!important;
     width:calc(50% - 7px)!important;flex:0 0 calc(50% - 7px)}
   .p2,.p5{margin-top:14px}
+  .music-toggle{width:50px;height:50px;right:.75rem;bottom:.75rem;font-size:1.35rem}
 }
 
 @media (prefers-reduced-motion:reduce){
