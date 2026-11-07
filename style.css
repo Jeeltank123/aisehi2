@@ -153,6 +153,22 @@ main{position:relative;z-index:3}
 }
 .btn:disabled{opacity:.6;cursor:wait;transform:none}
 
+.music-toggle{
+  position:fixed;right:1rem;bottom:1rem;z-index:90;
+  width:56px;height:56px;border:none;border-radius:50%;
+  background:linear-gradient(135deg,var(--rose),var(--hot-pink));
+  color:#fff;cursor:pointer;box-shadow:0 12px 28px rgba(244,91,147,.38);
+  font-size:1.5rem;display:grid;place-items:center;
+  transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.music-toggle:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 16px 32px rgba(244,91,147,.48)}
+.music-toggle:active{transform:scale(.96)}
+.music-toggle.is-playing{filter:saturate(1.15);background:linear-gradient(135deg,#ff9ec2,#f45b93)}
+.music-toggle:focus-visible{outline:3px solid var(--deep-rose);outline-offset:3px}
+@media (max-width:560px){
+  .music-toggle{width:50px;height:50px;right:.75rem;bottom:.75rem;font-size:1.35rem}
+}
+
 /* ---------- stamps ---------- */
 .stamp{
   font-family:var(--font-display);font-weight:800;letter-spacing:.18em;
