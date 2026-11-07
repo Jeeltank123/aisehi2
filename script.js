@@ -79,7 +79,6 @@ const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const CAN_HOVER = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 const fmtINR = n => '₹' + Number(n).toLocaleString('en-IN');
 const TOTAL_DEDUCTION = CONFIG.deductions.reduce((s, d) => s + d.amount, 0);
-
 let paused = false;
 document.addEventListener('visibilitychange', () => {
   paused = document.hidden;
